@@ -36,6 +36,7 @@ class DecimalCalculatorTests: XCTestCase {
             var resultError = error as? VarianceError
             XCTAssertNotNil(resultError)
             XCTAssertEqual(resultError!, VarianceError.numsEmptyError)
+            XCTAssertEqual(resultError!.errorDescription, "nums 배열의 원소가 비어있으면 안됩니다")
         }
     }
     
@@ -51,6 +52,7 @@ class DecimalCalculatorTests: XCTestCase {
             let resultError = error as? VarianceError
             XCTAssertNotNil(resultError)
             XCTAssertEqual(resultError!, VarianceError.numsOnlyOneElementError)
+            XCTAssertEqual(resultError!.errorDescription, "nums 배열의 원소가 하나만 있으면 안됩니다. Nan Error 를 일으킵니다.")
         }
     }
 }
