@@ -16,42 +16,55 @@ struct TextRefiner {
         var i = 0
         while i < result.count - 1 {
             let curIndex = result.index(result.startIndex, offsetBy: i)
-            let nextIndex = result.index(curIndex, offsetBy: 1)
-            
-            guard result[curIndex] == Self.emptyText,
-                  result[nextIndex] == Self.emptyText else {
+            guard isContinousEmpty(texts: result, at: curIndex) else {
                 i += 1
                 continue
             }
             
-            let emptyResult = findEmptyTextRangeOf(texts: result, firstIndex: curIndex)
-            let emptyCase = emptyResult.0
-            let emptyRange = emptyResult.1
-            
-            switch emptyCase {
-            case .middle:
-                result.replaceSubrange(emptyRange, with: " ")
-            case .toEnd:
-                result.replaceSubrange(emptyRange, with: "")
-            }
-            
+            result = replaceEmptyTextOf(texts: result, atFirst: curIndex)
             i += 1
         }
         return result
     }
     
-    enum FindCase {
-        case middle
-        case toEnd
+    private func isContinousEmpty(texts: String, at index: String.Index) -> Bool {
+        return texts[index] == Self.emptyText && texts[texts.index(after: index)] == Self.emptyText
     }
     
-    func findEmptyTextRangeOf(texts: String, firstIndex: String.Index) -> (FindCase, Range<String.Index>) {
-        for curIndex in texts.indices[firstIndex..<texts.endIndex] {
-            guard texts[curIndex] != Self.emptyText else { continue }
-            return (.middle, firstIndex ..< curIndex)
+    private func replaceEmptyTextOf(texts: String, atFirst firstIndex: String.Index) -> String {
+        var result = texts
+        
+        let emptyTextRange = self.emptyTextRange(texts: result, firstIndex: firstIndex)
+        let emptyCase = self.emptyCase(texts: result, firstIndex: firstIndex)
+        switch emptyCase {
+        case .middle:
+            result.replaceSubrange(emptyTextRange, with: " ")
+        case .end:
+            result.replaceSubrange(emptyTextRange, with: "")
         }
         
-        return (.toEnd, firstIndex ..< texts.endIndex)
+        return result
     }
     
+    enum EmptyCase {
+        case middle
+        case end
+    }
+    
+    private func emptyCase(texts: String, firstIndex: String.Index) -> EmptyCase {
+        for curIndex in texts.indices[firstIndex..<texts.endIndex] {
+            guard texts[curIndex] != Self.emptyText else { continue }
+            return .middle
+        }
+        return .end
+    }
+    
+    private func emptyTextRange(texts: String, firstIndex: String.Index) -> Range<String.Index> {
+        for curIndex in texts.indices[firstIndex..<texts.endIndex] {
+            guard texts[curIndex] != Self.emptyText else { continue }
+            return firstIndex ..< curIndex
+        }
+        
+        return firstIndex ..< texts.endIndex
+    }
 }
