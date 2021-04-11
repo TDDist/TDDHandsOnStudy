@@ -46,7 +46,7 @@ struct TextRefiner {
         return result
     }
     
-    enum EmptyCase {
+    private enum EmptyCase {
         case middle
         case end
     }
