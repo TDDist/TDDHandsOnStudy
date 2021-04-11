@@ -29,12 +29,4 @@ class TextRefinerTests: XCTestCase {
         // then
         XCTAssertEqual(result, "hello world")
     }
-    
-    func test_execute_성공메서드_for문_돌리기() {
-        let textRefiner = TextRefiner()
-        for texts in ["hello      world","hello           world       "] {
-            let result = textRefiner.execute(texts: texts)
-            XCTAssertEqual(result, "hello world")
-        }
-    }
 }
