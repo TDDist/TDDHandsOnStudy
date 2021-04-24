@@ -16,12 +16,9 @@ struct TextRefiner {
         var i = 0
         while i < result.count - 1 {
             let curIndex = result.index(result.startIndex, offsetBy: i)
-            guard isContinousEmpty(texts: result, at: curIndex) else {
-                i += 1
-                continue
+            if isContinousEmpty(texts: result, at: curIndex) {
+                result = replaceEmptyTextOf(texts: result, atFirst: curIndex)
             }
-            
-            result = replaceEmptyTextOf(texts: result, atFirst: curIndex)
             i += 1
         }
         return result
