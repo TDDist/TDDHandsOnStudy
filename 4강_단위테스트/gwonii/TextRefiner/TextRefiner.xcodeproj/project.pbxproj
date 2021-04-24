@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EABF10EA2634069900348540 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF10E92634069900348540 /* main.swift */; };
+		EABF10F8263408CB00348540 /* TextRefinerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF10F7263408CB00348540 /* TextRefinerTests.swift */; };
+		EABF1112263409B400348540 /* TextRefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF1111263409B400348540 /* TextRefiner.swift */; };
+		EABF111726340BAC00348540 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = EABF111626340BAC00348540 /* Nimble */; };
+		EABF111926340BBD00348540 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = EABF111826340BBD00348540 /* Quick */; };
+		EABF111A26340BC600348540 /* TextRefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF1111263409B400348540 /* TextRefiner.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EABF10FF263408F600348540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EABF10DE2634069900348540 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EABF10E52634069900348540;
+			remoteInfo = TextRefiner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EABF10E42634069900348540 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EABF10E62634069900348540 /* TextRefiner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TextRefiner; sourceTree = BUILT_PRODUCTS_DIR; };
+		EABF10E92634069900348540 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EABF10F5263408CB00348540 /* TextRefinerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextRefinerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EABF10F7263408CB00348540 /* TextRefinerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRefinerTests.swift; sourceTree = "<group>"; };
+		EABF10F9263408CB00348540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EABF1111263409B400348540 /* TextRefiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRefiner.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EABF10E32634069900348540 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EABF10F2263408CB00348540 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EABF111926340BBD00348540 /* Quick in Frameworks */,
+				EABF111726340BAC00348540 /* Nimble in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EABF10DD2634069900348540 = {
+			isa = PBXGroup;
+			children = (
+				EABF10E82634069900348540 /* TextRefiner */,
+				EABF10F6263408CB00348540 /* TextRefinerTests */,
+				EABF10E72634069900348540 /* Products */,
+				EABF111526340BAC00348540 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EABF10E72634069900348540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EABF10E62634069900348540 /* TextRefiner */,
+				EABF10F5263408CB00348540 /* TextRefinerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EABF10E82634069900348540 /* TextRefiner */ = {
+			isa = PBXGroup;
+			children = (
+				EABF10E92634069900348540 /* main.swift */,
+				EABF1111263409B400348540 /* TextRefiner.swift */,
+			);
+			path = TextRefiner;
+			sourceTree = "<group>";
+		};
+		EABF10F6263408CB00348540 /* TextRefinerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EABF10F7263408CB00348540 /* TextRefinerTests.swift */,
+				EABF10F9263408CB00348540 /* Info.plist */,
+			);
+			path = TextRefinerTests;
+			sourceTree = "<group>";
+		};
+		EABF111526340BAC00348540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EABF10E52634069900348540 /* TextRefiner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EABF10ED2634069900348540 /* Build configuration list for PBXNativeTarget "TextRefiner" */;
+			buildPhases = (
+				EABF10E22634069900348540 /* Sources */,
+				EABF10E32634069900348540 /* Frameworks */,
+				EABF10E42634069900348540 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextRefiner;
+			packageProductDependencies = (
+			);
+			productName = TextRefiner;
+			productReference = EABF10E62634069900348540 /* TextRefiner */;
+			productType = "com.apple.product-type.tool";
+		};
+		EABF10F4263408CB00348540 /* TextRefinerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EABF10FA263408CB00348540 /* Build configuration list for PBXNativeTarget "TextRefinerTests" */;
+			buildPhases = (
+				EABF10F1263408CB00348540 /* Sources */,
+				EABF10F2263408CB00348540 /* Frameworks */,
+				EABF10F3263408CB00348540 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EABF1100263408F600348540 /* PBXTargetDependency */,
+			);
+			name = TextRefinerTests;
+			packageProductDependencies = (
+				EABF111626340BAC00348540 /* Nimble */,
+				EABF111826340BBD00348540 /* Quick */,
+			);
+			productName = TextRefinerTests;
+			productReference = EABF10F5263408CB00348540 /* TextRefinerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EABF10DE2634069900348540 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					EABF10E52634069900348540 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					EABF10F4263408CB00348540 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = EABF10E12634069900348540 /* Build configuration list for PBXProject "TextRefiner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EABF10DD2634069900348540;
+			packageReferences = (
+				EABF11012634092500348540 /* XCRemoteSwiftPackageReference "Nimble" */,
+				EABF11062634098800348540 /* XCRemoteSwiftPackageReference "Quick" */,
+			);
+			productRefGroup = EABF10E72634069900348540 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EABF10E52634069900348540 /* TextRefiner */,
+				EABF10F4263408CB00348540 /* TextRefinerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EABF10F3263408CB00348540 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EABF10E22634069900348540 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EABF1112263409B400348540 /* TextRefiner.swift in Sources */,
+				EABF10EA2634069900348540 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EABF10F1263408CB00348540 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EABF111A26340BC600348540 /* TextRefiner.swift in Sources */,
+				EABF10F8263408CB00348540 /* TextRefinerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EABF1100263408F600348540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EABF10E52634069900348540 /* TextRefiner */;
+			targetProxy = EABF10FF263408F600348540 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EABF10EB2634069900348540 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EABF10EC2634069900348540 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EABF10EE2634069900348540 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJHLD62USU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EABF10EF2634069900348540 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJHLD62USU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EABF10FB263408CB00348540 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FJHLD62USU;
+				INFOPLIST_FILE = TextRefinerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.hc.gwonii.TextRefinerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EABF10FC263408CB00348540 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FJHLD62USU;
+				INFOPLIST_FILE = TextRefinerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.hc.gwonii.TextRefinerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EABF10E12634069900348540 /* Build configuration list for PBXProject "TextRefiner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EABF10EB2634069900348540 /* Debug */,
+				EABF10EC2634069900348540 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EABF10ED2634069900348540 /* Build configuration list for PBXNativeTarget "TextRefiner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EABF10EE2634069900348540 /* Debug */,
+				EABF10EF2634069900348540 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EABF10FA263408CB00348540 /* Build configuration list for PBXNativeTarget "TextRefinerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EABF10FB263408CB00348540 /* Debug */,
+				EABF10FC263408CB00348540 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EABF11012634092500348540 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.1;
+			};
+		};
+		EABF11062634098800348540 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EABF111626340BAC00348540 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EABF11012634092500348540 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		EABF111826340BBD00348540 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EABF11062634098800348540 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EABF10DE2634069900348540 /* Project object */;
+}
