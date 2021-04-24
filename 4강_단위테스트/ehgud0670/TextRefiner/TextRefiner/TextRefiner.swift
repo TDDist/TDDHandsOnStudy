@@ -8,39 +8,39 @@
 import Foundation
 
 struct TextRefiner {
-    static let emptyText: String.Element = " "
-    
     func execute(texts: String) -> String {
         var result = texts
         
         var i = 0
         while i < result.count - 1 {
             let curIndex = result.index(result.startIndex, offsetBy: i)
-            if isContinousEmpty(texts: result, at: curIndex) {
-                result = replaceEmptyTextOf(texts: result, atFirst: curIndex)
+            if result.isContainsDoubleEmpty(beginIndex: curIndex) {
+                result = result.replacingEmptyText(beginIndex: curIndex)
             }
             i += 1
         }
         return result
     }
+}
+
+private extension String {
+    static let emptyText: String.Element = " "
     
-    private func isContinousEmpty(texts: String, at index: String.Index) -> Bool {
-        return texts[index] == Self.emptyText && texts[texts.index(after: index)] == Self.emptyText
+    func isContainsDoubleEmpty(beginIndex: String.Index) -> Bool {
+        return self[beginIndex] == Self.emptyText && self[self.index(after: beginIndex)] == Self.emptyText
     }
     
-    private func replaceEmptyTextOf(texts: String, atFirst firstIndex: String.Index) -> String {
-        var result = texts
-        
-        let emptyTextRange = self.emptyTextRange(texts: result, firstIndex: firstIndex)
-        let emptyCase = self.emptyCase(texts: result, firstIndex: firstIndex)
+    mutating func replacingEmptyText(beginIndex: String.Index) -> String {
+        let emptyTextRange = self.emptyTextRange(beginIndex: beginIndex)
+        let emptyCase = self.emptyCase(beginIndex: beginIndex)
         switch emptyCase {
         case .middle:
-            result.replaceSubrange(emptyTextRange, with: " ")
+            self.replaceSubrange(emptyTextRange, with: " ")
         case .end:
-            result.replaceSubrange(emptyTextRange, with: "")
+            self.replaceSubrange(emptyTextRange, with: "")
         }
         
-        return result
+        return self
     }
     
     private enum EmptyCase {
@@ -48,20 +48,20 @@ struct TextRefiner {
         case end
     }
     
-    private func emptyCase(texts: String, firstIndex: String.Index) -> EmptyCase {
-        for curIndex in texts.indices[firstIndex..<texts.endIndex] {
-            guard texts[curIndex] != Self.emptyText else { continue }
+    private func emptyCase(beginIndex: String.Index) -> EmptyCase {
+        for curIndex in self.indices[beginIndex ..< self.endIndex] {
+            guard self[curIndex] != Self.emptyText else { continue }
             return .middle
         }
         return .end
     }
     
-    private func emptyTextRange(texts: String, firstIndex: String.Index) -> Range<String.Index> {
-        for curIndex in texts.indices[firstIndex..<texts.endIndex] {
-            guard texts[curIndex] != Self.emptyText else { continue }
-            return firstIndex ..< curIndex
+    private func emptyTextRange(beginIndex: String.Index) -> Range<String.Index> {
+        for curIndex in self.indices[beginIndex ..< self.endIndex] {
+            guard self[curIndex] != Self.emptyText else { continue }
+            return beginIndex ..< curIndex
         }
         
-        return firstIndex ..< texts.endIndex
+        return beginIndex ..< self.endIndex
     }
 }
