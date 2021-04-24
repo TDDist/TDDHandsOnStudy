@@ -14,7 +14,7 @@ struct TextRefiner {
         var i = 0
         while i < result.count - 1 {
             let curIndex = result.index(result.startIndex, offsetBy: i)
-            if result.isContainsDoubleEmpty(beginIndex: curIndex) {
+            if result.containsDoubleEmpty(beginIndex: curIndex) {
                 result = result.replacingEmptyText(beginIndex: curIndex)
             }
             i += 1
@@ -26,7 +26,7 @@ struct TextRefiner {
 private extension String {
     static let emptyText: String.Element = " "
     
-    func isContainsDoubleEmpty(beginIndex: String.Index) -> Bool {
+    func containsDoubleEmpty(beginIndex: String.Index) -> Bool {
         return self[beginIndex] == Self.emptyText && self[self.index(after: beginIndex)] == Self.emptyText
     }
     
