@@ -24,7 +24,7 @@ class FloatCalculatorTests: XCTestCase {
         XCTAssertEqual(unwrapResult, 3.5)
     }
     
-    func test_calculate_성공메소드_case2() throws {
+    func test_calculate_성공메소드_오차범위안에_들어가면_성공() throws {
         // given
         let nums = [2, 2, 5, 7, 6, 10, 7, 8, 9, 1]
         
@@ -35,6 +35,6 @@ class FloatCalculatorTests: XCTestCase {
         XCTAssertNotNil(result)
         
         let unwrapResult = try XCTUnwrap(result)
-        XCTAssertEqual(unwrapResult, 9.788889)
+        XCTAssertEqual(unwrapResult, 9.78, accuracy: 0.01)
     }
 }
