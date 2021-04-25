@@ -12,6 +12,7 @@ class TextRefiner {
         var source = args
         source = source.normalizeWhiteSpaces()
         source = source.compactWhiteSpaces()
+        source = source.trimmingCharacters(in: [" "])
         return source
     }
 }

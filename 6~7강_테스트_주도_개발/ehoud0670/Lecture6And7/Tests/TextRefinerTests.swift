@@ -17,6 +17,6 @@ class TextRefinerTests: XCTestCase {
     func testExecute_탭포함() {
         let refiner = TextRefiner()
         let result = refiner.execute(args: "hello  world\t")
-        XCTAssertEqual(result, "hello world ")
+        XCTAssertEqual(result, "hello world")
     }
 }
