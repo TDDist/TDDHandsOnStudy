@@ -11,6 +11,8 @@
 		F266E32B2634E7AF00D9099F /* VarianceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266E32A2634E7AF00D9099F /* VarianceTests.swift */; };
 		F266E3342634E7C800D9099F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266E30B2634E70000D9099F /* main.swift */; };
 		F266E3382634E80300D9099F /* TextRefinerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266E3372634E80300D9099F /* TextRefinerTests.swift */; };
+		F266E34E2634F45500D9099F /* Variance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266E34D2634F45500D9099F /* Variance.swift */; };
+		F266E34F2634F45500D9099F /* Variance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266E34D2634F45500D9099F /* Variance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,7 @@
 		F266E32A2634E7AF00D9099F /* VarianceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarianceTests.swift; sourceTree = "<group>"; };
 		F266E32C2634E7AF00D9099F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F266E3372634E80300D9099F /* TextRefinerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRefinerTests.swift; sourceTree = "<group>"; };
+		F266E34D2634F45500D9099F /* Variance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				F266E30B2634E70000D9099F /* main.swift */,
+				F266E34D2634F45500D9099F /* Variance.swift */,
 			);
 			path = Lecture6And7;
 			sourceTree = "<group>";
@@ -176,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F266E34E2634F45500D9099F /* Variance.swift in Sources */,
 				F266E30C2634E70000D9099F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +191,7 @@
 			files = (
 				F266E3382634E80300D9099F /* TextRefinerTests.swift in Sources */,
 				F266E3342634E7C800D9099F /* main.swift in Sources */,
+				F266E34F2634F45500D9099F /* Variance.swift in Sources */,
 				F266E32B2634E7AF00D9099F /* VarianceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

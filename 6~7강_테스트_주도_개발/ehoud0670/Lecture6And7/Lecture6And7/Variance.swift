@@ -23,35 +23,22 @@ class Variance {
     }
     
     func calculate(args: [String]) throws -> Double {
-        let n = args.count
-        
-        if n == 0 {
-            throw VarianceError.noInput
-        }
-        
-        if n == 1 {
-            throw VarianceError.oneInput
-        }
-        
-        var source: [Double] = [Double].init(repeating: 0.0, count: n)
-        for i in 0 ..< source.count {
-            guard let number = Double(args[i]) else { continue }
-            source[i] = number
-        }
-        print(source)
-        
-        var sum: Double = 0.0
-        for i in 0 ..< source.count {
-            sum += source[i]
-        }
-        
+        try throwErrorIfNotValidate(count: args.count)
+        let source = parsing(args)
+        let sum: Double = source.reduce(0, +)
         let mean: Double = sum / Double(source.count)
-        var sumOfSquares = 0.0
-        for i in 0 ..< source.count {
-            sumOfSquares += (source[i] - mean) * (source[i] - mean)
+        let sumOfSquares = source.reduce(0) { (prevResult, element) -> Double in
+            return prevResult + (element - mean) * (element - mean)
         }
-        
-        let variance = sumOfSquares / Double(source.count - 1)
-        return variance
+        return sumOfSquares / Double(source.count - 1)
+    }
+    
+    private func throwErrorIfNotValidate(count: Int) throws {
+        if count == 0 { throw VarianceError.noInput }
+        if count == 1 { throw VarianceError.oneInput }
+    }
+    
+    private func parsing(_ arguments: [String]) -> [Double] {
+        return arguments.map { Double($0) ?? 0.0 }
     }
 }
