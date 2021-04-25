@@ -8,14 +8,14 @@
 import XCTest
 
 class DecimalCalculatorTests: XCTestCase {
-    let decimalCalculator = DecimalCalculator()
+    let calculator = DecimalCalculator()
     
     func test_calculate_성공메소드() throws {
         // given
         let nums = [1, 2, 3, 4, 5, 6]
         
         // when
-        let result = try? decimalCalculator.calculate(nums: nums)
+        let result = try? calculator.calculate(nums: nums)
         
         // then
         XCTAssertNotNil(result)
@@ -30,7 +30,7 @@ class DecimalCalculatorTests: XCTestCase {
         
         // when
         do {
-            _ = try decimalCalculator.calculate(nums: empty)
+            _ = try calculator.calculate(nums: empty)
         } catch {
             // then
             let resultError = error as? VarianceError
@@ -46,7 +46,7 @@ class DecimalCalculatorTests: XCTestCase {
         
         // when
         do {
-            _ = try decimalCalculator.calculate(nums: zero)
+            _ = try calculator.calculate(nums: zero)
         } catch {
             // then
             let resultError = error as? VarianceError

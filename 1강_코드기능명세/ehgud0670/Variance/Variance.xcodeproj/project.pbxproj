@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F266E3622635414600D9099F /* DoubleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266E3612635414600D9099F /* DoubleCalculator.swift */; };
+		F266E3662635425D00D9099F /* DoubleCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266E3652635425D00D9099F /* DoubleCalculatorTests.swift */; };
+		F266E3692635429500D9099F /* DoubleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266E3612635414600D9099F /* DoubleCalculator.swift */; };
 		F2E9F87F26209ECB00212336 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9F87E26209ECB00212336 /* main.swift */; };
-		F2E9F8982620A0AC00212336 /* VarianceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9F8972620A0AC00212336 /* VarianceCalculator.swift */; };
+		F2E9F8982620A0AC00212336 /* VarianceCalculatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9F8972620A0AC00212336 /* VarianceCalculatable.swift */; };
 		F2E9F8A22620A10B00212336 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9F87E26209ECB00212336 /* main.swift */; };
-		F2E9F8A52620A10E00212336 /* VarianceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9F8972620A0AC00212336 /* VarianceCalculator.swift */; };
+		F2E9F8A52620A10E00212336 /* VarianceCalculatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9F8972620A0AC00212336 /* VarianceCalculatable.swift */; };
 		F2E9F8B72620A71800212336 /* DecimalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9F8B62620A71800212336 /* DecimalCalculator.swift */; };
 		F2E9F8BA2620A75C00212336 /* DecimalCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9F8B62620A71800212336 /* DecimalCalculator.swift */; };
 		F2E9F8C62620A99A00212336 /* DecimalCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9F8C52620A99A00212336 /* DecimalCalculatorTests.swift */; };
@@ -31,11 +34,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F266E3612635414600D9099F /* DoubleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCalculator.swift; sourceTree = "<group>"; };
+		F266E3652635425D00D9099F /* DoubleCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCalculatorTests.swift; sourceTree = "<group>"; };
 		F2E9F87B26209ECB00212336 /* Variance */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Variance; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E9F87E26209ECB00212336 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F2E9F88A2620A02500212336 /* VarianceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VarianceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E9F88E2620A02500212336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2E9F8972620A0AC00212336 /* VarianceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarianceCalculator.swift; sourceTree = "<group>"; };
+		F2E9F8972620A0AC00212336 /* VarianceCalculatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarianceCalculatable.swift; sourceTree = "<group>"; };
 		F2E9F8B62620A71800212336 /* DecimalCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalCalculator.swift; sourceTree = "<group>"; };
 		F2E9F8C52620A99A00212336 /* DecimalCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalCalculatorTests.swift; sourceTree = "<group>"; };
 		F2E9F8C92620AC9700212336 /* VarianceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarianceError.swift; sourceTree = "<group>"; };
@@ -81,7 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				F2E9F87E26209ECB00212336 /* main.swift */,
-				F2E9F8972620A0AC00212336 /* VarianceCalculator.swift */,
+				F2E9F8972620A0AC00212336 /* VarianceCalculatable.swift */,
+				F266E3612635414600D9099F /* DoubleCalculator.swift */,
 				F2E9F8B62620A71800212336 /* DecimalCalculator.swift */,
 				F2E9F8C92620AC9700212336 /* VarianceError.swift */,
 			);
@@ -93,6 +99,7 @@
 			children = (
 				F2E9F88E2620A02500212336 /* Info.plist */,
 				F2E9F8C52620A99A00212336 /* DecimalCalculatorTests.swift */,
+				F266E3652635425D00D9099F /* DoubleCalculatorTests.swift */,
 			);
 			path = VarianceTests;
 			sourceTree = "<group>";
@@ -185,9 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2E9F8982620A0AC00212336 /* VarianceCalculator.swift in Sources */,
+				F2E9F8982620A0AC00212336 /* VarianceCalculatable.swift in Sources */,
 				F2E9F8CA2620AC9700212336 /* VarianceError.swift in Sources */,
 				F2E9F87F26209ECB00212336 /* main.swift in Sources */,
+				F266E3622635414600D9099F /* DoubleCalculator.swift in Sources */,
 				F2E9F8B72620A71800212336 /* DecimalCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,9 +204,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2E9F8A52620A10E00212336 /* VarianceCalculator.swift in Sources */,
+				F2E9F8A52620A10E00212336 /* VarianceCalculatable.swift in Sources */,
 				F2E9F8A22620A10B00212336 /* main.swift in Sources */,
+				F266E3662635425D00D9099F /* DoubleCalculatorTests.swift in Sources */,
 				F2E9F8BA2620A75C00212336 /* DecimalCalculator.swift in Sources */,
+				F266E3692635429500D9099F /* DoubleCalculator.swift in Sources */,
 				F2E9F8CF2620B01F00212336 /* VarianceError.swift in Sources */,
 				F2E9F8C62620A99A00212336 /* DecimalCalculatorTests.swift in Sources */,
 			);

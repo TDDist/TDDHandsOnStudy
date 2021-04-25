@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol VarianceCalculator {
+protocol VarianceCalculatable {
     associatedtype VarianceType
     
     func calculate(nums: [Int]) throws -> VarianceType

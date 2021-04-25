@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DecimalCalculator: VarianceCalculator {
+class DecimalCalculator: VarianceCalculatable {
     typealias VarianceType = Decimal
     
     func calculate(nums: [Int]) throws -> Decimal {
