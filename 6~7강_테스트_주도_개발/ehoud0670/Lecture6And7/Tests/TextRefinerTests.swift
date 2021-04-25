@@ -19,4 +19,10 @@ class TextRefinerTests: XCTestCase {
         let result = refiner.execute(args: "hello  world\t")
         XCTAssertEqual(result, "hello world")
     }
+    
+    func testExecute_bannedWords_포함() {
+        let refiner = TextRefiner()
+        let result = refiner.execute(args: "kimdo    jason    hello    words      ", bannedWords: ["kimdo", "jason"])
+        XCTAssertEqual(result, "***** ***** hello words")
+    }
 }
