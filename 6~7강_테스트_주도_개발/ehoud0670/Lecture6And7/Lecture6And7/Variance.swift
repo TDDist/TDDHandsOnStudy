@@ -24,12 +24,11 @@ class Variance {
     
     func calculate(args: [String]) throws -> Double {
         try throwErrorIfNotValidate(count: args.count)
+        
         let source = parsing(args)
-        let sum: Double = source.reduce(0, +)
-        let mean: Double = sum / Double(source.count)
-        let sumOfSquares = source.reduce(0) { (prevResult, element) -> Double in
-            return prevResult + (element - mean) * (element - mean)
-        }
+        let mean = calculateMean(parsing(args))
+        let sumOfSquares = calculateSumOfSquares(source: source, mean: mean)
+        
         return sumOfSquares / Double(source.count - 1)
     }
     
@@ -40,5 +39,14 @@ class Variance {
     
     private func parsing(_ arguments: [String]) -> [Double] {
         return arguments.map { Double($0) ?? 0.0 }
+    }
+    
+    private func calculateMean(_ source: [Double]) -> Double {
+        let sum: Double = source.reduce(0, +)
+        return sum / Double(source.count)
+    }
+    
+    private func calculateSumOfSquares(source: [Double], mean: Double) -> Double {
+        return source.map({ pow($0 - mean, 2) }).reduce(0, +)
     }
 }
