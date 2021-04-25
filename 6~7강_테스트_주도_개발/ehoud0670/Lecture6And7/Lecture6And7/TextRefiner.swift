@@ -10,13 +10,17 @@ import Foundation
 class TextRefiner {
     func execute(args: String) -> String {
         var source = args
+        source = source.normalizeWhiteSpaces()
         source = source.compactWhiteSpaces()
-        
         return source
     }
 }
 
 private extension String {
+    func normalizeWhiteSpaces() -> String {
+        return self.replacingOccurrences(of: "\t", with: " ")
+    }
+    
     mutating func compactWhiteSpaces() -> String {
         guard containsDoubleEmpty() else { return self }
         
@@ -34,6 +38,7 @@ private extension String {
     }
     
     private func containsDoubleEmpty(beginIndex: String.Index) -> Bool {
+        guard self.index(after: beginIndex) != self.endIndex else { return false }
         return self[beginIndex] == " " && self[self.index(after: beginIndex)] == " "
     }
 }
