@@ -10,23 +10,23 @@ import Foundation
 class TextRefiner {
     func execute(args: String) -> String {
         var source = args
-        source = source.normalizeWhiteSpaces()
-        source = source.compactWhiteSpaces()
+        source = source.normalizedWhiteSpaces()
+        source = source.compactedWhiteSpaces()
         source = source.trimmingCharacters(in: [" "])
         return source
     }
 }
 
 private extension String {
-    func normalizeWhiteSpaces() -> String {
+    func normalizedWhiteSpaces() -> String {
         return self.replacingOccurrences(of: "\t", with: " ")
     }
     
-    mutating func compactWhiteSpaces() -> String {
+    mutating func compactedWhiteSpaces() -> String {
         guard containsDoubleEmpty() else { return self }
         
         self = replacingOccurrences(of: "  ", with: " ")
-        return compactWhiteSpaces()
+        return compactedWhiteSpaces()
     }
     
     private func containsDoubleEmpty() -> Bool {
