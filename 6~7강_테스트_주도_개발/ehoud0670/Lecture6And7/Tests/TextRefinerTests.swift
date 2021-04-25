@@ -8,5 +8,9 @@
 import XCTest
 
 class TextRefinerTests: XCTestCase {
-    
+    func testExecute() {
+        let refiner = TextRefiner()
+        let result = refiner.execute(args: "hello  world       bravo")
+        XCTAssertEqual(result, "hello world bravo")
+    }
 }

@@ -28,7 +28,6 @@ class Variance {
         let source = parsing(args)
         let mean = calculateMean(parsing(args))
         let sumOfSquares = calculateSumOfSquares(source: source, mean: mean)
-        
         return sumOfSquares / Double(source.count - 1)
     }
     
