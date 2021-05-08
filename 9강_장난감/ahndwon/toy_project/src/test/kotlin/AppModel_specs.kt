@@ -36,7 +36,7 @@ class AppModel_specs : AnnotationSpec() {
         sut.processInput("1")
         val actual = sut.flushOutput()
 
-        actual shouldBe "Single player game \nI'm thinking of a number between 1 and 100.\nEnter your guess: "
+        actual shouldBe "Single player game\nI'm thinking of a number between 1 and 100.\nEnter your guess: "
     }
 
     @Test
@@ -97,7 +97,7 @@ class AppModel_specs : AnnotationSpec() {
             repeat(fails) {
                 sut.processInput("30")
             }
-            sut.flushOutput()
+//            sut.flushOutput()
             sut.processInput("50")
 
             val actual = sut.flushOutput()
@@ -151,5 +151,220 @@ class AppModel_specs : AnnotationSpec() {
             actual shouldStartWith "Correct! "
         }
     }
+
+    @Test
+    fun sut_correctly_prints_multiplayer_game_setup_message() {
+        val sut = AppModel(PositiveIntegerGeneratorStub(50))
+        sut.flushOutput()
+        sut.processInput("2")
+
+        val actual = sut.flushOutput()
+        actual shouldStartWith "Multiplayer game\nEnter player names separated with commas: "
+    }
+
+    @Test
+    fun sut_correctly_prints_multiplayer_game_start_message() {
+        val sut = AppModel(PositiveIntegerGeneratorStub(50))
+        sut.processInput("2")
+        sut.flushOutput()
+        sut.processInput("Foo, Bar")
+
+        val actual = sut.flushOutput()
+        actual shouldStartWith "I'm thinking of a number between 1 and 100.\n"
+    }
+
+    @Test
+    fun sut_correctly_prompts_first_player_name() {
+        listOf(
+            "Foo, Bar, Baz",
+            "Bar, Baz, Foo",
+            "Baz, Foo, Bar",
+        ).map {
+            it.split(",").map(String::trim)
+        }.map {
+            Triple(it[0], it[1], it[2])
+        }.forEach { (player1, player2, player3) ->
+            val sut = AppModel(PositiveIntegerGeneratorStub(50))
+            sut.processInput("2")
+            sut.flushOutput()
+            sut.processInput("$player1, $player2, $player3")
+
+            val actual = sut.flushOutput()
+            actual shouldEndWith "Enter $player1's guess: "
+        }
+    }
+
+    @Test
+    fun sut_correctly_prompts_second_player_name() {
+        listOf(
+            "Foo, Bar, Baz",
+            "Bar, Baz, Foo",
+            "Baz, Foo, Bar",
+        ).map {
+            it.split(",").map(String::trim)
+        }.map {
+            Triple(it[0], it[1], it[2])
+        }.forEach { (player1, player2, player3) ->
+            val sut = AppModel(PositiveIntegerGeneratorStub(50))
+            sut.processInput("2")
+            sut.processInput("$player1, $player2, $player3")
+            sut.flushOutput()
+            sut.processInput("10")
+
+            val actual = sut.flushOutput()
+            actual shouldEndWith "Enter $player2's guess: "
+        }
+    }
+
+    @Test
+    fun sut_correctly_prompts_third_player_name() {
+        listOf(
+            "Foo, Bar, Baz",
+            "Bar, Baz, Foo",
+            "Baz, Foo, Bar",
+        ).map {
+            it.split(",").map(String::trim)
+        }.map {
+            Triple(it[0], it[1], it[2])
+        }.forEach { (player1, player2, player3) ->
+            val sut = AppModel(PositiveIntegerGeneratorStub(50))
+            sut.processInput("2")
+            sut.processInput("$player1, $player2, $player3")
+            sut.processInput("90")
+            sut.flushOutput()
+            sut.processInput("90")
+
+            val actual = sut.flushOutput()
+            actual shouldEndWith "Enter $player3's guess: "
+        }
+    }
+
+    @Test
+    fun sut_correctly_prints_too_low_message_in_multiplayer_game() {
+        listOf(
+            "50, 40, 1, Foo",
+            "30, 29, 2, Bar",
+        ).map {
+            it.split(",").map(String::trim)
+        }.map {
+            data class Quad<out A, out B, out C, out D>(
+                val first: A,
+                val second: B,
+                val third: C,
+                val fourth: D
+            )
+            Quad(it[0].toInt(), it[1].toInt(), it[2].toInt(), it[3])
+        }.forEach { (answer, guess, fails, lastPlayer) ->
+            val sut = AppModel(PositiveIntegerGeneratorStub(answer))
+            sut.processInput("2")
+            sut.processInput("Foo, Bar, Baz")
+            repeat(fails - 1) {
+                sut.processInput(guess.toString())
+            }
+
+            sut.flushOutput()
+            sut.processInput(guess.toString())
+
+            val actual = sut.flushOutput()
+            actual shouldStartWith "$lastPlayer's guess is too low.\n"
+        }
+    }
+
+    @Test
+    fun sut_correctly_prints_too_high_message_in_multiplayer_game() {
+        listOf(
+            "50, 60, 1, Foo",
+            "9, 81, 2, Bar",
+        ).map {
+            it.split(",").map(String::trim)
+        }.map {
+            data class Quad<out A, out B, out C, out D>(
+                val first: A,
+                val second: B,
+                val third: C,
+                val fourth: D
+            )
+            Quad(it[0].toInt(), it[1].toInt(), it[2].toInt(), it[3])
+        }.forEach { (answer, guess, fails, lastPlayer) ->
+            val sut = AppModel(PositiveIntegerGeneratorStub(answer))
+            sut.processInput("2")
+            sut.processInput("Foo, Bar, Baz")
+            repeat(fails - 1) {
+                sut.processInput(guess.toString())
+            }
+
+            sut.flushOutput()
+            sut.processInput(guess.toString())
+
+            val actual = sut.flushOutput()
+            actual shouldStartWith "$lastPlayer's guess is too high.\n"
+        }
+    }
+
+    @Test
+    fun sut_correctly_prints_correct_message_in_multiplayer_game() {
+        listOf(
+            1, 10, 100
+        ).forEach { answer ->
+            val sut = AppModel(PositiveIntegerGeneratorStub(answer))
+            sut.processInput("2")
+            sut.processInput("Foo, Bar, Baz")
+            sut.flushOutput()
+
+            sut.processInput(answer.toString())
+
+            val actual = sut.flushOutput()
+            actual shouldStartWith "Correct! "
+        }
+    }
+
+    @Test
+    fun sut_correctly_prints_winner_if_multiplayer_game_finished() {
+        listOf(
+            "0" to "Foo",
+            "1" to "Bar",
+            "2" to "Baz",
+            "99" to "Foo",
+            "100" to "Bar",
+        ).forEach { (fails, winner) ->
+            val sut = AppModel(PositiveIntegerGeneratorStub(50))
+            sut.processInput("2")
+            sut.processInput("Foo, Bar, Baz")
+            repeat(fails.toInt()) {
+                sut.processInput("30")
+            }
+            sut.flushOutput()
+            sut.processInput("50")
+
+            val actual = sut.flushOutput()
+            actual shouldContain "$winner wins.\n"
+        }
+    }
+
+    @Test
+    fun sut_prints_select_mode_message_if_multiplayer_game_finished() {
+        val sut = AppModel(PositiveIntegerGeneratorStub(50))
+        sut.processInput("2")
+        sut.processInput("Foo, Bar, Baz")
+        sut.flushOutput()
+        sut.processInput("50")
+
+        val actual = sut.flushOutput()
+        actual shouldEndWith AppModel.SELECT_MODE_MESSAGE
+    }
+
+    @Test
+    fun sut_returns_to_mode_selection_if_multiplayer_game_finished() {
+        val sut = AppModel(PositiveIntegerGeneratorStub(50))
+        sut.processInput("2")
+        sut.processInput("Foo, Bar, Baz")
+        sut.processInput("20")
+        sut.processInput("50")
+        sut.processInput("3")
+
+        val actual = sut.isCompleted()
+        actual shouldBe true
+    }
+
 }
 

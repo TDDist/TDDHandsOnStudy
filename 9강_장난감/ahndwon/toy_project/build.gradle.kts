@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.4.32"
+    id("io.kotest") version "0.3.7"
 }
 
 group = "org.example"
