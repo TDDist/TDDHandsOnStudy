@@ -24,7 +24,6 @@
 		EA4F9C742659527700A82666 /* ContentsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F9C732659527700A82666 /* ContentsSectionView.swift */; };
 		EA4F9C762659533600A82666 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F9C752659533600A82666 /* ContentCell.swift */; };
 		EA4F9C79265955CB00A82666 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F9C78265955CB00A82666 /* UIColor.swift */; };
-		EA4F9C7B265957CD00A82666 /* ContentCellSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4F9C7A265957CD00A82666 /* ContentCellSampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		EA4F9C732659527700A82666 /* ContentsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsSectionView.swift; sourceTree = "<group>"; };
 		EA4F9C752659533600A82666 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		EA4F9C78265955CB00A82666 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		EA4F9C7A265957CD00A82666 /* ContentCellSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCellSampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +107,6 @@
 				EA4F9C712659526300A82666 /* InputSectionView.swift */,
 				EA4F9C732659527700A82666 /* ContentsSectionView.swift */,
 				EA4F9C752659533600A82666 /* ContentCell.swift */,
-				EA4F9C7A265957CD00A82666 /* ContentCellSampleView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -219,7 +216,6 @@
 				EA4F9C742659527700A82666 /* ContentsSectionView.swift in Sources */,
 				EA4F9C3E26594D4D00A82666 /* AppDelegate.swift in Sources */,
 				EA4F9C722659526300A82666 /* InputSectionView.swift in Sources */,
-				EA4F9C7B265957CD00A82666 /* ContentCellSampleView.swift in Sources */,
 				EA4F9C79265955CB00A82666 /* UIColor.swift in Sources */,
 				EA4F9C762659533600A82666 /* ContentCell.swift in Sources */,
 				EA4F9C4026594D4D00A82666 /* SceneDelegate.swift in Sources */,
