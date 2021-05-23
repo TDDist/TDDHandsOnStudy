@@ -8,6 +8,7 @@
 import Foundation
 
 struct Comment {
+    let id: UUID
     let writer: String
     let content: String
     let createdAt: String

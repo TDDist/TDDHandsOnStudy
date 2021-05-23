@@ -19,7 +19,7 @@ final class MainViewModel {
     private let createCommentUseCase: CreateCommentUseCase
     
     init() {
-        createCommentUseCase = DefaultCreateCommentUseCase()
+        createCommentUseCase = DefaultCreateCommentUseCase(refiner: CompositeStringRefiner(refiners: [TrimWhiteSpaces(), CompactWhiteSpaces()]))
     }
     
     func create(writer: String, content: String) {
