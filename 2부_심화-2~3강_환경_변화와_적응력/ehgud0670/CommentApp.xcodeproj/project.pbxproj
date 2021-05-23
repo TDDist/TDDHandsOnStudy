@@ -22,6 +22,7 @@
 		F29FE868265A6F4C00F7FFF5 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE867265A6F4C00F7FFF5 /* CommentView.swift */; };
 		F29FE883265A754700F7FFF5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE882265A754700F7FFF5 /* Comment.swift */; };
 		F29FE88C265A763200F7FFF5 /* TimeStamper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE88B265A763200F7FFF5 /* TimeStamper.swift */; };
+		F29FE895265A76F600F7FFF5 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE894265A76F600F7FFF5 /* CommentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F29FE867265A6F4C00F7FFF5 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		F29FE882265A754700F7FFF5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F29FE88B265A763200F7FFF5 /* TimeStamper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStamper.swift; sourceTree = "<group>"; };
+		F29FE894265A76F600F7FFF5 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		F29FE807265A4CC700F7FFF5 /* CommentApp */ = {
 			isa = PBXGroup;
 			children = (
+				F29FE893265A76E600F7FFF5 /* ViewModel */,
 				F29FE880265A753700F7FFF5 /* Model */,
 				F29FE86C265A707C00F7FFF5 /* Views */,
 				F29FE808265A4CC700F7FFF5 /* AppDelegate.swift */,
@@ -166,11 +169,19 @@
 		F29FE880265A753700F7FFF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F29FE83E265A4F8200F7FFF5 /* ContentRefiner */,
 				F29FE882265A754700F7FFF5 /* Comment.swift */,
-				F29FE88B265A763200F7FFF5 /* TimeStamper.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F29FE893265A76E600F7FFF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F29FE83E265A4F8200F7FFF5 /* ContentRefiner */,
+				F29FE894265A76F600F7FFF5 /* CommentViewModel.swift */,
+				F29FE88B265A763200F7FFF5 /* TimeStamper.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				F29FE868265A6F4C00F7FFF5 /* CommentView.swift in Sources */,
 				F29FE809265A4CC700F7FFF5 /* AppDelegate.swift in Sources */,
 				F29FE84F265A632400F7FFF5 /* LabelFactory.swift in Sources */,
+				F29FE895265A76F600F7FFF5 /* CommentViewModel.swift in Sources */,
 				F29FE848265A50B700F7FFF5 /* ContentRefiner.swift in Sources */,
 				F29FE85A265A68C000F7FFF5 /* CommentViewFactory.swift in Sources */,
 				F29FE88C265A763200F7FFF5 /* TimeStamper.swift in Sources */,
