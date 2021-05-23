@@ -13,8 +13,20 @@ protocol CreateCommentUseCase {
 
 class DefaultCreateCommentUseCase: CreateCommentUseCase {
     
-    func invoke(writer: String, content: String) -> Comment {
-        
-        return Comment(writer: writer, content: content, createdAt: Date().description(with: .current))
+    private let refiner: StringRefiner
+    
+    init(refiner: StringRefiner) {
+        self.refiner = refiner
     }
+    
+    func invoke(writer: String, content: String) -> Comment {
+        return Comment(
+            id: UUID(),
+            writer: writer,
+            content: refiner.refine(content),
+            createdAt: Date().description(with: .current)
+        )
+    }
+    
+    
 }
