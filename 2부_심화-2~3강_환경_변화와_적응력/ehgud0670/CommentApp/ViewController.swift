@@ -8,12 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //MARK:- IBOutlet
+    @IBOutlet weak var authorTextField: UITextField!
+    @IBOutlet weak var contentTextField: UITextField!
+    @IBOutlet weak var outputTextView: UITextView!
+    
+    //MARK:- Properties
+    private var contentRefiner: ContentRefinable!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.contentRefiner = ContentRefiner()
     }
-
-
+    
+    @IBAction func inputButtonDidTouch(_ sender: UIButton) {
+        
+    }
 }
 
