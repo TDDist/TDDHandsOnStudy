@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     //MARK:- IBOutlet
     @IBOutlet weak var authorTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextField!
-    @IBOutlet weak var contentStack: UIStackView!
+    @IBOutlet weak var outputView: UIStackView!
     
     private let commentViewModel = CommentViewModel(contentRefiner: ContentRefiner())
     
@@ -20,10 +20,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func inputButtonDidTouch(_ sender: UIButton) {
-        writeToContentStack(author: authorTextField.text, content: contentTextField.text)
+        writeToOutputView(author: authorTextField.text, content: contentTextField.text)
     }
     
-    private func writeToContentStack(author: String?, content: String?) {
+    private func writeToOutputView(author: String?, content: String?) {
         guard let author = author, let content = content else { return }
         guard !author.isEmpty, !content.isEmpty else { return }
         
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         // create CommentView
         guard let comment = commentViewModel.latestComment else { return }
         let commentView = CommentView(comment: comment)
-        self.contentStack.addArrangedSubview(commentView)
+        self.outputView.addArrangedSubview(commentView)
     }
 }
 

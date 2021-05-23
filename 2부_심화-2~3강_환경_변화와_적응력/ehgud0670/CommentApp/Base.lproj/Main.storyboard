@@ -64,8 +64,8 @@
                     </view>
                     <connections>
                         <outlet property="authorTextField" destination="c4V-GA-QLS" id="9ut-2j-n60"/>
-                        <outlet property="contentStack" destination="EeK-9p-jh6" id="e1i-Zr-yQ1"/>
                         <outlet property="contentTextField" destination="AcE-O7-XCn" id="G7u-FW-xTC"/>
+                        <outlet property="outputView" destination="EeK-9p-jh6" id="e1i-Zr-yQ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
