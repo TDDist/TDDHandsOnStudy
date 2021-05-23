@@ -15,6 +15,8 @@
 		F29FE815265A4CCA00F7FFF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29FE813265A4CCA00F7FFF5 /* LaunchScreen.storyboard */; };
 		F29FE820265A4CCA00F7FFF5 /* CommentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE81F265A4CCA00F7FFF5 /* CommentAppTests.swift */; };
 		F29FE82B265A4CCA00F7FFF5 /* CommentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE82A265A4CCA00F7FFF5 /* CommentAppUITests.swift */; };
+		F29FE840265A4FA600F7FFF5 /* ContentRefinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE83F265A4FA600F7FFF5 /* ContentRefinable.swift */; };
+		F29FE848265A50B700F7FFF5 /* ContentRefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE847265A50B700F7FFF5 /* ContentRefiner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F29FE826265A4CCA00F7FFF5 /* CommentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29FE82A265A4CCA00F7FFF5 /* CommentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAppUITests.swift; sourceTree = "<group>"; };
 		F29FE82C265A4CCA00F7FFF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F29FE83F265A4FA600F7FFF5 /* ContentRefinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRefinable.swift; sourceTree = "<group>"; };
+		F29FE847265A50B700F7FFF5 /* ContentRefiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRefiner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		F29FE807265A4CC700F7FFF5 /* CommentApp */ = {
 			isa = PBXGroup;
 			children = (
+				F29FE83E265A4F8200F7FFF5 /* ContentRefiner */,
 				F29FE808265A4CC700F7FFF5 /* AppDelegate.swift */,
 				F29FE80A265A4CC700F7FFF5 /* SceneDelegate.swift */,
 				F29FE80C265A4CC700F7FFF5 /* ViewController.swift */,
@@ -126,6 +131,15 @@
 				F29FE82C265A4CCA00F7FFF5 /* Info.plist */,
 			);
 			path = CommentAppUITests;
+			sourceTree = "<group>";
+		};
+		F29FE83E265A4F8200F7FFF5 /* ContentRefiner */ = {
+			isa = PBXGroup;
+			children = (
+				F29FE83F265A4FA600F7FFF5 /* ContentRefinable.swift */,
+				F29FE847265A50B700F7FFF5 /* ContentRefiner.swift */,
+			);
+			path = ContentRefiner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29FE840265A4FA600F7FFF5 /* ContentRefinable.swift in Sources */,
 				F29FE80D265A4CC700F7FFF5 /* ViewController.swift in Sources */,
 				F29FE809265A4CC700F7FFF5 /* AppDelegate.swift in Sources */,
+				F29FE848265A50B700F7FFF5 /* ContentRefiner.swift in Sources */,
 				F29FE80B265A4CC700F7FFF5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
