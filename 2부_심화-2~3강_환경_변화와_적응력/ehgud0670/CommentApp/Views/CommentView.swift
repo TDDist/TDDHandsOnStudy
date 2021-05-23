@@ -8,9 +8,9 @@
 import UIKit
 
 final class CommentView: UIView {
-    private var contentLabel: UIView!
-    private var authorLabel: UIView!
-    private var timeLabel: UIView!
+    private var contentLabel: UILabel!
+    private var authorLabel: UILabel!
+    private var timeLabel: UILabel!
     
     init(content: String, author: String, time: String) {
         super.init(frame: .zero)
