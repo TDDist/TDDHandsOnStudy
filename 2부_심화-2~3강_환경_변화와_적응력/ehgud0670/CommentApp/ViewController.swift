@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     //MARK:- IBOutlet
     @IBOutlet weak var authorTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextField!
-    @IBOutlet weak var outputTextView: UITextView!
+    @IBOutlet weak var contentStack: UIStackView!
     
     //MARK:- Properties
     private var contentRefiner: ContentRefinable!
@@ -23,7 +23,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func inputButtonDidTouch(_ sender: UIButton) {
-        
+        writeToContentStack(text: timeDescription(local: Locale(identifier: "KR")))
+    }
+    
+    private func writeToContentStack(text: String) {
+        let label = createLabel(text: timeDescription(local: Locale(identifier: "KR")))
+        self.contentStack.addArrangedSubview(label)
+    }
+    
+    private func createLabel(text: String) -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
+        return label
+    }
+    
+    private func timeDescription(date: Date = Date() ,local: Locale?) -> String {
+        return date.description(with: local)
     }
 }
 
