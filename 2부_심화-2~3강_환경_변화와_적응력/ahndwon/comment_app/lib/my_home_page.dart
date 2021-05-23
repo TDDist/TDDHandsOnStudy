@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'comment.dart';
 import 'comment_composer.dart';
+import 'form.dart';
 
 class MyHomePage extends StatefulWidget {
   final CommentComposer commentComposer;
@@ -25,15 +26,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController _authorTextController;
-  TextEditingController _contentTextController;
   List<Comment> items = [];
 
-  @override
-  void initState() {
-    super.initState();
-    _authorTextController = TextEditingController();
-    _contentTextController = TextEditingController();
+  void onNewComment(Comment comment) {
+    setState(() {
+      items.add(comment);
+    });
   }
 
   @override
@@ -46,29 +44,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Column(
           children: <Widget>[
-            Row(
-              children: [
-                Container(
-                    width: 400,
-                    child: _inputTextField(_authorTextController, "작성자")),
-                Container(
-                    width: 400,
-                    child: _inputTextField(_contentTextController, "내용")),
-                CupertinoButton(child: Text("입력"), onPressed: _handleSubmit)
-              ],
-            ),
+            form(widget.commentComposer, onNewComment),
             Expanded(child: buildListView()),
           ],
         ));
-  }
-
-  void _handleSubmit() {
-    setState(() {
-      items.add(widget.commentComposer
-          .compose(_authorTextController.text, _contentTextController.text));
-      _authorTextController.text = "";
-      _contentTextController.text = "";
-    });
   }
 
   ListView buildListView() {
@@ -87,43 +66,5 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           );
         });
-  }
-
-  TextField _inputTextField(TextEditingController controller, String hint) {
-    return TextField(
-      controller: controller,
-      autocorrect: true,
-      autofocus: true,
-      decoration: InputDecoration(
-        hintText: hint,
-        // hintStyle: TextStyle(
-        //   color: Theme.of(context).dividerColor
-        // ),
-        prefixIcon: Icon(
-          Icons.search,
-        ),
-        suffixIcon: InkWell(
-            onTap: () => {
-                  _authorTextController.clear(),
-                  FocusScope.of(context).unfocus()
-                },
-            child: Icon(
-              Icons.close,
-              color: Colors.black,
-            )),
-        // hintStyle: TextStyle(color: Colors.grey),
-        filled: true,
-        fillColor: Colors.white70,
-        // focusColor: Colors.pinkAccent,
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(12.0)),
-          borderSide: BorderSide(color: Colors.grey, width: 2),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-          borderSide: BorderSide(color: Colors.grey, width: 2),
-        ),
-      ),
-    );
   }
 }
