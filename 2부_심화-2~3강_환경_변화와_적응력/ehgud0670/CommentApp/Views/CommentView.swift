@@ -12,11 +12,11 @@ final class CommentView: UIView {
     private var authorLabel: UILabel!
     private var timeLabel: UILabel!
     
-    init(content: String, author: String, time: String) {
+    init(comment: Comment) {
         super.init(frame: .zero)
-        configureContentLabel(content: content)
-        configureAuthorLabel(author: author)
-        configureTimeLabel(time: time)
+        configureContentLabel(content: comment.content)
+        configureAuthorLabel(author: comment.author)
+        configureTimeLabel(time: comment.time)
     }
     
     required init?(coder: NSCoder) {

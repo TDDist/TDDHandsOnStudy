@@ -20,6 +20,7 @@
 		F29FE84F265A632400F7FFF5 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE84E265A632400F7FFF5 /* LabelFactory.swift */; };
 		F29FE85A265A68C000F7FFF5 /* CommentViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE859265A68C000F7FFF5 /* CommentViewFactory.swift */; };
 		F29FE868265A6F4C00F7FFF5 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE867265A6F4C00F7FFF5 /* CommentView.swift */; };
+		F29FE883265A754700F7FFF5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE882265A754700F7FFF5 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F29FE84E265A632400F7FFF5 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		F29FE859265A68C000F7FFF5 /* CommentViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewFactory.swift; sourceTree = "<group>"; };
 		F29FE867265A6F4C00F7FFF5 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		F29FE882265A754700F7FFF5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		F29FE807265A4CC700F7FFF5 /* CommentApp */ = {
 			isa = PBXGroup;
 			children = (
+				F29FE880265A753700F7FFF5 /* Model */,
 				F29FE86C265A707C00F7FFF5 /* Views */,
 				F29FE83E265A4F8200F7FFF5 /* ContentRefiner */,
 				F29FE808265A4CC700F7FFF5 /* AppDelegate.swift */,
@@ -157,6 +160,14 @@
 				F29FE84E265A632400F7FFF5 /* LabelFactory.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F29FE880265A753700F7FFF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F29FE882265A754700F7FFF5 /* Comment.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 				F29FE84F265A632400F7FFF5 /* LabelFactory.swift in Sources */,
 				F29FE848265A50B700F7FFF5 /* ContentRefiner.swift in Sources */,
 				F29FE85A265A68C000F7FFF5 /* CommentViewFactory.swift in Sources */,
+				F29FE883265A754700F7FFF5 /* Comment.swift in Sources */,
 				F29FE80B265A4CC700F7FFF5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

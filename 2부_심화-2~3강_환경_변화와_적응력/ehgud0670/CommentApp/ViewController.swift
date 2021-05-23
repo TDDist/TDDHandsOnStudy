@@ -30,12 +30,13 @@ class ViewController: UIViewController {
         guard let author = author, let content = content else { return }
         guard !author.isEmpty, !content.isEmpty else { return }
         
-        let commentView = CommentView(
+        let comment = Comment(
             content: contentRefiner.execute(content: content, bannedWords: nil),
             author: author,
             time: timeDescription()
         )
         
+        let commentView = CommentView(comment: comment)
         self.contentStack.addArrangedSubview(commentView)
     }
     
