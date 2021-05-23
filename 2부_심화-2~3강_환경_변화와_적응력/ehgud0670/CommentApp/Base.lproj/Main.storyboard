@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,16 +13,16 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CommentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="작성자" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4V-GA-QLS">
-                                <rect key="frame" x="38" y="78" width="145" height="41"/>
+                                <rect key="frame" x="38" y="78" width="136.66666666666666" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBO-Mo-AiP">
-                                <rect key="frame" x="186.5" y="139" width="41" height="41"/>
+                                <rect key="frame" x="176" y="136.33333333333334" width="38" height="38.333333333333343"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BBO-Mo-AiP" secondAttribute="height" multiplier="1:1" id="ZSH-iq-nKN"/>
@@ -33,18 +33,18 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="내용" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcE-O7-XCn">
-                                <rect key="frame" x="231" y="78" width="145" height="41"/>
+                                <rect key="frame" x="215.66666666666663" y="78" width="136.33333333333337" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="EeK-9p-jh6">
-                                <rect key="frame" x="10" y="190" width="394" height="662"/>
+                                <rect key="frame" x="10" y="184.66666666666669" width="370" height="575.33333333333326"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EeK-9p-jh6" secondAttribute="bottom" constant="10" id="03d-ek-5Vz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EeK-9p-jh6" secondAttribute="bottom" constant="50" id="03d-ek-5Vz"/>
                             <constraint firstItem="c4V-GA-QLS" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.35" id="0T8-2D-CL9"/>
                             <constraint firstItem="BBO-Mo-AiP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Bh-eC-gqR"/>
                             <constraint firstItem="BBO-Mo-AiP" firstAttribute="top" secondItem="c4V-GA-QLS" secondAttribute="bottom" constant="20" id="DVk-Tj-np0"/>
