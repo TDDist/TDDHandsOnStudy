@@ -1,4 +1,5 @@
 import 'package:comment_app/content-refiners/compact_whitespaces.dart';
+import 'package:comment_app/content-refiners/mask_banned_words.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,12 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(
           title: 'Flutter Demo Home Page',
-          commentComposer: CommentComposerFactory(CompositeContentRefinerFactory([CompactWhiteSpaces(), TrimWhiteSpaces()]))),
+          commentComposer:
+              CommentComposerFactory(CompositeContentRefinerFactory([
+            CompactWhiteSpaces(),
+            TrimWhiteSpaces(),
+            MaskBannedWords(["fuck", "sex"])
+          ]))),
     );
   }
 }
