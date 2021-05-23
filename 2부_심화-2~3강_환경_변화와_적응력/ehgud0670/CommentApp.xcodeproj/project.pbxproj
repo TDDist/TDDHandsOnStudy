@@ -19,6 +19,7 @@
 		F29FE848265A50B700F7FFF5 /* ContentRefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE847265A50B700F7FFF5 /* ContentRefiner.swift */; };
 		F29FE84F265A632400F7FFF5 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE84E265A632400F7FFF5 /* LabelFactory.swift */; };
 		F29FE85A265A68C000F7FFF5 /* CommentViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE859265A68C000F7FFF5 /* CommentViewFactory.swift */; };
+		F29FE868265A6F4C00F7FFF5 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE867265A6F4C00F7FFF5 /* CommentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F29FE847265A50B700F7FFF5 /* ContentRefiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRefiner.swift; sourceTree = "<group>"; };
 		F29FE84E265A632400F7FFF5 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		F29FE859265A68C000F7FFF5 /* CommentViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewFactory.swift; sourceTree = "<group>"; };
+		F29FE867265A6F4C00F7FFF5 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +109,11 @@
 		F29FE807265A4CC700F7FFF5 /* CommentApp */ = {
 			isa = PBXGroup;
 			children = (
+				F29FE86C265A707C00F7FFF5 /* Views */,
 				F29FE83E265A4F8200F7FFF5 /* ContentRefiner */,
 				F29FE808265A4CC700F7FFF5 /* AppDelegate.swift */,
 				F29FE80A265A4CC700F7FFF5 /* SceneDelegate.swift */,
 				F29FE80C265A4CC700F7FFF5 /* ViewController.swift */,
-				F29FE84E265A632400F7FFF5 /* LabelFactory.swift */,
-				F29FE859265A68C000F7FFF5 /* CommentViewFactory.swift */,
 				F29FE80E265A4CC700F7FFF5 /* Main.storyboard */,
 				F29FE811265A4CCA00F7FFF5 /* Assets.xcassets */,
 				F29FE813265A4CCA00F7FFF5 /* LaunchScreen.storyboard */,
@@ -146,6 +147,16 @@
 				F29FE847265A50B700F7FFF5 /* ContentRefiner.swift */,
 			);
 			path = ContentRefiner;
+			sourceTree = "<group>";
+		};
+		F29FE86C265A707C00F7FFF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F29FE867265A6F4C00F7FFF5 /* CommentView.swift */,
+				F29FE859265A68C000F7FFF5 /* CommentViewFactory.swift */,
+				F29FE84E265A632400F7FFF5 /* LabelFactory.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 			files = (
 				F29FE840265A4FA600F7FFF5 /* ContentRefinable.swift in Sources */,
 				F29FE80D265A4CC700F7FFF5 /* ViewController.swift in Sources */,
+				F29FE868265A6F4C00F7FFF5 /* CommentView.swift in Sources */,
 				F29FE809265A4CC700F7FFF5 /* AppDelegate.swift in Sources */,
 				F29FE84F265A632400F7FFF5 /* LabelFactory.swift in Sources */,
 				F29FE848265A50B700F7FFF5 /* ContentRefiner.swift in Sources */,

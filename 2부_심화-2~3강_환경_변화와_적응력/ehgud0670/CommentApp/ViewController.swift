@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     
     //MARK:- Properties
     private var contentRefiner: ContentRefinable!
-    private let commentViewFactory = CommentViewFactory(labelFactory: LabelFactory())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,7 @@ class ViewController: UIViewController {
         guard let author = author, let content = content else { return }
         guard !author.isEmpty, !content.isEmpty else { return }
         
-        let commentView = commentViewFactory.createCommentView(
+        let commentView = CommentView(
             content: contentRefiner.execute(content: content, bannedWords: nil),
             author: author,
             time: timeDescription()

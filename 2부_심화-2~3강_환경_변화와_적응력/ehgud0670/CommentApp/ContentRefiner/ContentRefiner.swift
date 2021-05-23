@@ -8,7 +8,6 @@
 import Foundation
 
 final class ContentRefiner: ContentRefinable {
-    
     func execute(content: String, bannedWords: [String]?) -> String {
         var content = content
         content = trimWhiteSpaces(content)
