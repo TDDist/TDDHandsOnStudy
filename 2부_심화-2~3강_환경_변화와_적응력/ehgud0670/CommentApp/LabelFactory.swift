@@ -15,13 +15,4 @@ class LabelFactory {
         label.font = .systemFont(ofSize: size)
         return label
     }
-    
-    func createCurrentTimeLabel(locale: Locale? = Locale(identifier: "KR")) -> UILabel {
-        let label = createLabel(text: timeDescription(local: locale))
-        return label
-    }
-    
-    private func timeDescription(date: Date = Date() ,local: Locale?) -> String {
-        return date.description(with: local)
-    }
 }
