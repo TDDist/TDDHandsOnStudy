@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     //MARK:- Properties
     private var contentRefiner: ContentRefinable!
+    private let timeStamper = TimeStamper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +34,11 @@ class ViewController: UIViewController {
         let comment = Comment(
             content: contentRefiner.execute(content: content, bannedWords: nil),
             author: author,
-            time: timeDescription()
+            time: timeStamper.makeTimeDescription()
         )
         
         let commentView = CommentView(comment: comment)
         self.contentStack.addArrangedSubview(commentView)
-    }
-    
-    func timeDescription(date: Date = Date() ,local: Locale? = Locale(identifier: "KR")) -> String {
-        return date.description(with: local)
     }
 }
 
