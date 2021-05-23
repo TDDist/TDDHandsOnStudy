@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet weak var outputView: UIStackView!
     
-    private let commentViewModel = CommentViewModel(contentRefiner: ContentRefiner())
+    private let commentViewModel = CommentViewModel(
+        contentRefiner: CompositeContentRefiner(contentRefiners: [WhiteSpaceTrimmer(),WhiteSpaceCompactor(),BannedWordMasker(bannedWords: ["why", "me"])])
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()

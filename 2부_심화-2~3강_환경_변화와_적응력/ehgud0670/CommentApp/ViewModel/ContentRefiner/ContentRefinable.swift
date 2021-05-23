@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ContentRefinable {
-    func execute(content: String, bannedWords: [String]?) -> String
+    func refine(content: String) -> String
 }

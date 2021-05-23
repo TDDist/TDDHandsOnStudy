@@ -19,7 +19,7 @@ final class CommentViewModel {
     
     func updateComments(author: String, content: String) {
         let comment = Comment(
-            content: contentRefiner.execute(content: content, bannedWords: nil),
+            content: contentRefiner.refine(content: content),
             author: author,
             time: timeStamper.makeTimeDescription()
         )
