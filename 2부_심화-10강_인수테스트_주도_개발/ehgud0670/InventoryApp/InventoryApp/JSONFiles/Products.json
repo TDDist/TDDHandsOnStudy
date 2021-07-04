@@ -1,0 +1,16 @@
+[
+    {
+        "supplierName": "STARK",
+        "productCode": "STARK-001",
+        "productName": "Stark product 001",
+        "listPrice": 100000,
+        "discount": 10000
+    },
+    {
+        "supplierName": "WAYNE",
+        "productCode": "WAYNE-001",
+        "productName": "Wayne product 001",
+        "listPrice": 150000,
+        "discount": 15000
+    }
+]
